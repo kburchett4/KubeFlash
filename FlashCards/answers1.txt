@@ -1,0 +1,52 @@
+Docker	Docker is the industry-leading containerisation technology, currently possessing 95% market share.
+Kubernetes	Open-source container-orchestration system for automating computer application deployment, scaling, and management.
+Namespaces	Namespaces are an abstraction used in Kubernetes. It allows you to have multiple virtual clusters within the same physical cluster. Each of these virtual clusters is a namespace.
+Cluster	Clusters actually run the containerized applications being managed by Kubernetes. A cluster is a series of nodes connected together.
+Microservices	Microservice architecture is a method of structuring and developing applications. Rather than having a large, monolithic application.
+Pod	A Pod holds one or more container(s). Pods are the simplest unit that exists within kubernetes.
+Node	Nodes are the hardware components. A node is likely to be a virtual machine hosted by a cloud provider or a physical machine in a data centre.
+Services	A service is an API object that exposes an application, it essentially describes how network traffic should access a set of pods. Services are found on every node.
+Deployment	Deployments are an API object, they essentially manage pod replication.
+Kubeadm	Kubeadm is a quickstart installation tool for Kubernetes.
+Minikube	Minikube is a lightweight version of Kubernetes which is much easier to use locally. It will create a VM on your local machine where you an run a single-node cluster.
+Worker Node	Worker nodes are where pods are deployed, Kubernetes has a master-slave architecture, so a worker node is a slave.
+Kubelet	Kubelet is an agent that runs on every worker node in a cluster. This is an important component because it receives the instructions from the master node.
+Kube-Proxy	Kube-Proxy is the Kubernetes network proxy. It is a service that runs on every node and handles request forwarding.
+Master Node	Master nodes control the deployment of pods, and therefore the worker nodes.
+Etcd	etcd stores configuration information for large, distributed systems.
+Scheduler (Kube-Scheduler)	The scheduler is a component on the master node and it does what it says on the tin - makes scheduling decisions for newly created pods.
+Controller	A controller is a component on the master node, it works to move the application from its current state towards the desired state.
+Kube-controller-manager	This is a component on the master node that manages all of the controllers. Each controller e.g ReplicationController, NamespaceController etc. is actually separate, individual process. However, to simplify cluster management, they are all complied into a single process. The kube-controller-manager is responsible for this compilation.
+kube-apiserver	Kube-apiserver is a component on the master node which reveals the Kubernetes API to the master.
+Kubectl	Kubectl is the official Kubernetes command line interface tool. It is used to communicate
+Aggregation Layer	The aggregation layer allows you to extend Kubernetes by installing additional APIs.
+Name	Names are unique identifiers for Kubernetes object, they are client-provided. Only one object can have a specific name at any given time.
+UIDs	UIDs are unique identifiers for Kubernetes objects, they are systems-generated. Unlike with names, every object created over the lifetime of a Kubernetes cluster has its own UID.
+Annotations	Annotations are key-value pairs which are used to attach non-identifying metadata to Kubernetes objects.
+Labels	Labels are key-value pairs which are used to attach meaningful, identifying metadata to Kubernetes objects.
+Selector	Selectors are used to querying Kubernetes resources and filter them by their labels. A selector allows you to idenfiy a set of objects with shared characteristic(s).
+PodPreset	PodPresent is an API object that automates the addition of information to pods as they are created.
+Container Environment Variable	Container environment variables are name-value pairs which provide meaningful information to the containers running in a pod.
+Taint	A taint is a key-value pair which prevents pods from being scheduled on nodes/node groups. Taints are specified on nodes
+Toleration	A toleration is a key-value pair specified on pods which enables pods to be scheduled on nodes/nodegroups. Tolerations are specified on pods.
+Job	A job is a task that runs to completion. The task is classed as complete when the required number of pods have completed and terminated. The job tracks the successful completions of the pods.
+Cronjob	Conjob manages jobs which run on a schedule, it also allows you to add some specific parameters for how job failure should be handled.
+StatefulSets	Stateless applications generally make Kubernetes  a lot easier, but there can be issues with data loss if a pod fails. StatefulSets helps to overcome this. With StatefulSets, you can assign a pod a number, and assign resources to that number -such as volumes, network IDs and other indexes. So if a pod fails, it'll be restored with the same data it had previously.
+DaemonSet	A DaemonSet is used to deploy system daemons that power Kubernetes and the OS log collectors or node monitoring agents.
+Probes	Probes check the liveness and readiness of containers within pods. If a liveness probe detects an issue where an application is running but not making progress then it can restart a container to increase the applications availability.
+Operators	Operators are deployed to Kubernetes cluster and enable you to write an application to fully manage another.
+Persistent Volumes	Persistent Volumes (PVs) are used for static provisioning, where storage has been created in advance.
+Storage Class	Storage classes are used to define the different storage types available on the cluster.
+Network Policy	The network polciy specifies how pods can communicate with each other and with other network endpoints e.g ports.
+Container Registry	A service that stores your container images. i.e. Docker Hub, Azure Container Registry, Google, AWS Container Registry
+Container Repository	A collection of related images with the same name but different tags. "Location for you to publish and access images - similar to something like GitHub to access git repos"
+Container	A running image. Container creation adds a writable layer on top of the immutable image. Read-write copy of that filesystem (image) allowing for modification of the entire copy of the image. Containers are autonomous, they provide strong isolation, ensuring they do not interrupt other running containers, as well as the server that supports them.
+Image	Think "Snapshot". An image is a static, immutable file that includes executable code so it can run an isolated process on IT infrastucture. Image is comprosed of system libraries, source code, dependencies, tools and other files needed for an app to run. The image shares the OS kernel of its host machine.
+Container Tag	An alphanumeric identifier attached to images within a repository. i.e. 14.04, latest, stable
+Host-OS: General Purpose	RHEL, Ubuntu, Windows Server
+Host-OS: Container-Specific	Read-Only File System to reduce likelihood of attacker ability to persist data within it + simplified upgrade process to reduce app compatibility concerns i.e. CoreOS Container Linux, Project Atomic, Google Container-Optimized OS
+Ingress	Ingress is the 'door' to your Kubernetes cluster. It is an API object that allows external traffic to access the services in your cluster.
+CustomResourceDefinition	A custom resource definition (CRD) allows you to extend the Kubernetes API beyond the built-in resources without having to build a full custom server.
+Resource Quota	Resource quotas are applied to namespaces to constrain their resource consumption.
+Horizontal Pod AutoScaler (HPA)	HPA is an API resource which automates pod replication.
+Container Network Interface	The CSI provides a standard interface between storage systems and containers.

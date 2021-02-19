@@ -1,0 +1,52 @@
+Docker
+Kubernetes
+Namespaces
+Cluster
+Microservices
+Pod
+Node
+Services
+Deployment
+Kubeadm
+Minikube
+Worker Node
+Kubelet
+Kube-Proxy
+Master Node
+Etcd
+Scheduler (Kube-Scheduler)
+Controller
+Kube-controller-manager
+kube-apiserver
+Kubectl
+Aggregation Layer
+Name
+UIDs
+Annotations
+Labels
+Selector
+PodPreset
+Container Environment Variable
+Taint
+Toleration
+Job
+Cronjob
+StatefulSets
+DaemonSet
+Probes
+Operators
+Persistent Volumes
+Storage Class
+Network Policy
+Container Registry
+Container Repository
+Container
+Image
+Container Tag
+Host-OS: General Purpose
+Host-OS: Container-Specific
+Ingress
+CustomResourceDefinition
+Resource Quota
+Horizontal Pod AutoScaler (HPA)
+Container Network Interface
